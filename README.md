@@ -1,21 +1,32 @@
 # Cognition Commons
 
-Open research on cognitive architectures and agent systems.
+Open research on cognitive architectures, multi-agent systems, and the design patterns of machine cognition.
 
-## About
+**Website:** [cognitioncommons.org](https://cognitioncommons.org)
 
-This repository contains the content for [cognitioncommons.org](https://cognitioncommons.org) - a research project documenting cognitive architecture design, multi-agent coordination, and alignment techniques.
+## Research Notes
 
-## Structure
+- [Cognitive Architecture Overview](https://cognitioncommons.org/research/cognitive-architecture-overview)
+- [Multi-Agent Coordination](https://cognitioncommons.org/research/multi-agent-coordination)
+- [Multi-Model Debate Patterns](https://cognitioncommons.org/research/multi-model-debate)
+- [Tool-Using Agent Architectures](https://cognitioncommons.org/research/tool-using-agents)
+- [Cognitive Oversight Systems](https://cognitioncommons.org/research/cognitive-oversight-systems)
+- [Uncertainty and Metacognition](https://cognitioncommons.org/research/uncertainty-metacognition)
 
-- `research/` - Research notes and technical memos
-- `pages/` - Static pages (about, contributing)
-- `settings/` - Site configuration
+## Contributing
 
-## Content Management
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-Content is managed via [Sveltia CMS](https://github.com/sveltia/sveltia-cms) at `/admin` using GitHub authentication.
+## Governance
+
+Maintainers review contributions. Decisions favor merging over gatekeeping. Disagreements resolved by discussion in issues; if unresolved, maintainers decide. Fork freely if you disagree.
+
+See [governance](https://cognitioncommons.org/governance) for details.
 
 ## License
 
-Content is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Content is published openly for discussion and collaboration.
+
+---
+
+Primary contributor: [Benjamin Goldman](https://github.com/sideblank)
