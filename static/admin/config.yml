@@ -1,0 +1,97 @@
+backend:
+  name: github
+  repo: cognitioncommons/cognitioncommons.org
+  branch: main
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: research
+    label: Research Notes
+    label_singular: Research Note
+    folder: research
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: title
+    summary: "{{title}} ({{category}})"
+    sortable_fields: ['date', 'title', 'category']
+    fields:
+      - name: title
+        label: Title
+        widget: string
+        required: true
+      - name: slug
+        label: Slug
+        widget: string
+        pattern: ['^[0-9]{3}-[a-z0-9-]+$', 'Must be format: 001-slug-name']
+        required: true
+      - name: date
+        label: Date
+        widget: datetime
+        date_format: YYYY-MM-DD
+        required: true
+      - name: category
+        label: Category
+        widget: select
+        options:
+          - { label: "Architecture", value: "architecture" }
+          - { label: "Coordination", value: "coordination" }
+          - { label: "Consciousness", value: "consciousness" }
+          - { label: "Reasoning", value: "reasoning" }
+          - { label: "Ethics", value: "ethics" }
+          - { label: "Memory", value: "memory" }
+          - { label: "Planning", value: "planning" }
+          - { label: "Tools", value: "tools" }
+        required: true
+      - name: status
+        label: Status
+        widget: select
+        default: draft
+        options:
+          - { label: "Draft", value: "draft" }
+          - { label: "Review", value: "review" }
+          - { label: "Published", value: "published" }
+        required: true
+      - name: body
+        label: Content
+        widget: markdown
+        required: true
+
+  - name: pages
+    label: Pages
+    label_singular: Page
+    folder: pages
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: title
+    fields:
+      - name: title
+        label: Title
+        widget: string
+        required: true
+      - name: slug
+        label: Slug
+        widget: string
+        required: true
+      - name: body
+        label: Content
+        widget: markdown
+        required: true
+
+  - name: settings
+    label: Settings
+    files:
+      - name: general
+        label: General Settings
+        file: settings/general.yml
+        fields:
+          - name: site_title
+            label: Site Title
+            widget: string
+          - name: site_description
+            label: Site Description
+            widget: text
+          - name: github_url
+            label: GitHub URL
+            widget: string
